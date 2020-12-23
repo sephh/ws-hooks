@@ -1,9 +1,14 @@
 import React from 'react';
 import Pokemons from "./views/Pokemons";
+import PokemonProvider from "./providers/PokemonProvider";
+import PokemonList from "./views/PokemonList";
 
 function App() {
     return (
-        <Pokemons/>
+        <PokemonProvider>
+            <Pokemons/>
+            <PokemonList/>
+        </PokemonProvider>
     );
 }
 
