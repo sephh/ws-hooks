@@ -1,16 +1,16 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { AppBar, Box, Container, Grid } from '@material-ui/core';
 
 import Logo from '../components/Logo';
 import CardGrid from '../components/CardGrid';
-import {PokemonContext} from "../providers/PokemonProvider";
+import {usePokemon} from "../hooks/pokemon.hook";
 
 const Pokemons = () => {
-  const { fetch, loading, pokemons } = useContext(PokemonContext);
+  const { fetch, loading, pokemons } = usePokemon();
 
   useEffect(() => {
     fetch({});
-  }, [fetch]);
+  }, []);
 
   return (
     <div>

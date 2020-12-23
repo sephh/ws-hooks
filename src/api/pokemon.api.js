@@ -1,7 +1,7 @@
-import Api from './Api';
+import axios from "axios";
 
-export const getCards = ({ page = 1, query = '', pageSize = 27 }) => {
-  return Api.get(`/cards?page=${page}&name=${query}&pageSize=${pageSize}`).then(
-    (res) => res.data.cards
-  );
+export const getCards = ({page = 1, query = '', pageSize = 27}) => {
+    return axios.get(`${process.env.REACT_APP_API_URL}/cards?page=${page}&name=${query}&pageSize=${pageSize}`).then(
+        (res) => res.data.cards
+    );
 };

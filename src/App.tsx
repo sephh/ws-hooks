@@ -1,13 +1,10 @@
 import React from 'react';
-import PokemonProvider from "./providers/PokemonProvider";
 import Pokemons from "./views/Pokemons";
 
 function App() {
-  return (
-    <PokemonProvider>
-      <Pokemons/>
-    </PokemonProvider>
-  );
+    return (
+        <Pokemons/>
+    );
 }
 
 export default App;
